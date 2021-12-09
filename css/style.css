@@ -1,0 +1,39 @@
+/*
+-[ Spacing (px) ]-
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+-[ Font Sizing (px) ]-
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;600;700&display=swap");
+
+* {
+  font-family: "Readex Pro";
+}
+
+::selection {
+  background-color: #9b960b8e;
+}
+
+body {
+  /* So we can use REM */
+  font-size: 62.5%;
+
+  padding-left: 0.8rem;
+}
+
+h1 {
+  padding-top: 1.2rem;
+
+  font-weight: 200 !important;
+  font-size: 4.4rem !important;
+}
+
+#motto {
+  font-size: 2rem;
+}
+
+.navbar {
+  background: linear-gradient(300deg, #0c970c, #226322);
+}

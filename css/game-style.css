@@ -1,0 +1,89 @@
+.clix {
+  color: #7e7a07;
+}
+
+.clixet {
+  color: #3c5311;
+}
+
+/* 
+body {
+  background-color: orange !important;
+} */
+
+/* Just...stuff */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* [>-[ DISPLAYS ]-<[ */
+
+#clix-display {
+  text-align: center;
+  font-size: 1.2rem;
+
+  padding: 0.8rem;
+  border: 10px ridge #7e7a07;
+  border-radius: 10px;
+  width: 16.9rem;
+
+  color: #524f08;
+  background-color: #cec934;
+  box-shadow: rgba(0, 0, 0, 0.411) 0px 0px 20px;
+}
+
+.clik-multiplier-display {
+  font-size: 2.4rem;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  z-index: 999999999;
+
+  color: rgb(8, 80, 8);
+  text-shadow: rgba(0, 0, 0, 0.25) 15px 25px 7px;
+}
+
+.combo {
+  color: rgb(117, 12, 12);
+  font-size: 3.6rem;
+}
+
+/* ]>-[ DISPLAYS ]-<] */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* [>-[ BUTTONS ]-<[ */
+
+/* Clik */
+#clik {
+  background-color: #7e7a07;
+  color: #faf8c0;
+
+  box-shadow: rgba(0, 0, 0, 0.103) 15px 25px 20px;
+}
+
+#clik:hover {
+  background-color: #7e7a07d5;
+  color: #fffc9db2;
+}
+
+#clik:active {
+  background-color: #4d4a05ad;
+  color: #fffc9d1f;
+}
+
+/* Clixet Multiplier Upgrade */
+#clixet-multiplier {
+  background-color: #3c5311;
+  color: #e9fac0;
+
+  box-shadow: rgba(0, 0, 0, 0.103) 15px 25px 20px;
+}
+
+#clixet-multiplier:hover {
+  background-color: #3c5311d7;
+  color: #e9fac086;
+}
+
+#clixet-multiplier:active {
+  background-color: #3c5311ab;
+  color: #e9fac04d;
+}
+
+/* ]>-[ BUTTONS ]-<] */

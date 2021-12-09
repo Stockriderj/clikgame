@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/game-style.css">
+
+    <title>clikGAME</title>
+</head>
+
+<div id="navbarSlot" aria-roledescription="A slot for the navbar"></div>
+
+<body>
+
+    <details id="how-to-play" class="mt-5">
+            <summary>How to play</summary>
+            <p>Click on the button to get <span class="clix">clix</span>.</p>
+            <p>You can use these <span class="clix">clix</span> to buy upgrades at the <span class="clixet">clixet</span>, which in turn make getting <span class="clix">clix</span> more efficient.</p>
+        </details>
+
+    <section id="game">
+        <p id="clix-display">clix display</p>
+
+        <button id="clik" class="btn">clik</button>
+
+        <details>
+            <summary class="clixet">Clixet</summary>
+
+            <button id="clixet-multiplier" class="btn">Upgrade</button>
+            <button id="delete-progress" class="btn btn-danger">Trash my progress</button>
+        </details>
+    </section>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <script src="js/game-script.js"></script>
+
+    <!-- Setup across files -->
+    <script src="js/setup.js"></script>
+</body>
+
+</html>
