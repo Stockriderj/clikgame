@@ -21,13 +21,15 @@ body {
   font-size: 62.5%;
 
   padding-left: 0.8rem;
+
+  font-size: 1rem;
 }
 
 h1 {
   padding-top: 1.2rem;
 
-  font-weight: 200 !important;
-  font-size: 4.4rem !important;
+  font-weight: 200;
+  font-size: 4.4rem;
 }
 
 #motto {

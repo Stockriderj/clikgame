@@ -1,36 +1,63 @@
-const clixDisplay = document.querySelector("#clix-display");
+// [>-[ GAME ELEMENTS ]-<]
 const clikBtn = document.querySelector("#clik");
+
+// - Displays -
+const clixDisplay = document.querySelector("#clix-display");
+const dignityDisplay = document.querySelector("#dignity-display");
+
+// - Clixet -
+
+// Clixet Multiplier Upgrade
+const clixetMultiplierBtn = document.querySelector("#clixet-multiplier");
+var clixetMultiplierCost = 2;
+
+// Dignity Trading
+const clixetDignityBtn = document.querySelector("#clixet-dignity");
+
+// [>-[ GAME VARIABLES ]-<]
+var clix = 0;
+var dignity = 0;
+
+var multiplier = 1;
+
+var comboMultiplier = 0;
+var comboActive = false;
 
 // Sounds
 const clikSounds = [new Audio("../sounds/clik/clik1.mp3"), new Audio("../sounds/clik/clik2.wav")];
 
-// Clixet
-const clixetMultiplierBtn = document.querySelector("#clixet-multiplier");
-var clixetMultiplierCost = 2;
-
-var comboMultiplier = 0;
-var comboActive = false;
 
 function getRandomNumber(max) {
     return Math.round(Math.random() * max);
 }
 
+// Get stuff from LocalStorage
 if (localStorage.getItem("clix") != null) {
     clix = parseInt(localStorage.getItem("clix"));
+    dignity = parseInt(localStorage.getItem("dignity"));
+
     multiplier = parseInt(localStorage.getItem("multiplier"));
+
+    clixetMultiplierCost = localStorage.getItem("clixetMultiplierCost");
+    console.log(clixetMultiplierCost);
 } else {
     localStorage.setItem("clix", 0);
-    clix = 0;
+    localStorage.setItem("dignity", 0);
 
-    localStorage.setItem("multipler", 1);
-    multiplier = 1;
+    localStorage.setItem("multiplier", 1);
+
+    localStorage.setItem("clixetMultiplierCost", 2);
 }
 
 function gameRun() {
+    // LocalStorage saving
     localStorage.setItem("clix", clix);
+    localStorage.setItem("dignity", dignity);
     localStorage.setItem("multiplier", multiplier);
+    localStorage.setItem("clixetMultiplierCost", clixetMultiplierCost);
 
     clixDisplay.innerHTML = `<span class="clix">${clix}</span> clix`;
+    dignityDisplay.innerHTML = `<span class="dignity">${dignity}</span> dignity`;
 
     // stuff
     // -=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -113,7 +140,9 @@ clixetMultiplierBtn.addEventListener("click", () => {
 
         if (answer === "y") {
             clix -= clixetMultiplierCost;
+
             clixetMultiplierCost *= 2;
+
             multiplier++;
         } else {
             alert("ok");
@@ -122,6 +151,25 @@ clixetMultiplierBtn.addEventListener("click", () => {
         gameRun();
     } else {
         alert("ya suck ya don't have enough");
+    }
+});
+
+clixetDignityBtn.addEventListener("click", () => {
+    const ask = parseInt(prompt("How much dignity would you like? (100 clix = 1 dignity)"));
+    if (isNaN(ask)) {
+        alert("There was trouble processing that.");
+    } else {
+        const cost = ask * 100;
+        if (cost > clix) {
+            alert("You don't have enough clix.");
+        } else if (prompt("Are you sure? (type y to confirm)").toLowerCase() === "y") {
+            clix -= cost;
+            dignity += ask;
+
+            gameRun();
+
+            alert("Enjoy your newfound dignity!");
+        }
     }
 });
 
@@ -136,9 +184,12 @@ document.querySelector("#delete-progress").addEventListener("click", () => {
         alert("Goodbye... :[");
 
         clix = 0;
-        multiplier = 1;
-        clixetMultiplierCost = 2;
-    }
+        dignity = 0;
 
-    gameRun();
+        multiplier = 1;
+
+        clixetMultiplierCost = 2;
+
+        gameRun();
+    }
 });
