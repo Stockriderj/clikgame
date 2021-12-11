@@ -13,28 +13,78 @@ integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG
 
 <body>
 
-    <details id="how-to-play" class="mt-5">
-            <summary>How to play</summary>
-            <p>Click on the button to get <span class="clix">clix</span>.</p>
-            <p>You can use these <span class="clix">clix</span> to buy upgrades at the <span class="clixet">clixet</span>, which in turn make getting <span class="clix">clix</span> more efficient.</p>
-        </details>
+    <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=- -->
+        <!-- HELP -->
+
+        <!-- Button -->
+        <button type="button" class="btn btn-primary mt-3 mb-3" data-bs-toggle="modal" data-bs-target="#helpModal">Help</button>
+        
+        <!-- Help Modal -->
+        <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h1 class="modal-title">Help</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    </div>
+
+                    <div class="modal-body">
+
+                        <!-- How to Play -->
+                        <section>
+                            <h2>How to Play</h2>
+                            <p>Click on the <span class="clix">clik</span> button to get <span class="clix">clix</span>.</p>
+                            <p>You can use these <span class="clix">clix</span> to buy upgrades at the <span class="clixet">clixet</span>, which in turn make getting <span class="clix">clix</span> more efficient.</p>
+                        </section>
+
+                        <hr>
+
+                        <!-- Technical Difficulties -->
+                        <section>
+                            <h2>Technical Difficulties</h2>
+
+                            <!-- Stats saying NaN or null -->
+                            <h3>My stats are saying "NaN" or "null"</h3>
+                            <p>Sorry, but the only way to fix your stats if they say "NaN" or "null" is to reset your data. &#9785;</p>
+                        </section>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- HELP -->
+    <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=- -->
 
     <section id="game">
-        <p id="clix-display" class="stat-display">clix display</p>
 
-        <p id="dignity-display" class="stat-display">dignity display</p>
+        <div id="display-box">
+            <p id="clix-display" class="stat-display">clix display</p>
+
+            <p id="dignity-display" class="stat-display">dignity display</p>
+        </div>
 
         <button id="clik" class="btn">clik</button>
 
-        <details>
+        <details class="mt-3 mb-3 clixet">
             <summary class="clixet">Clixet</summary>
 
             <button id="clixet-multiplier" class="btn clixet-btn">Upgrade</button>
 
             <button id="clixet-dignity" class="btn clixet-btn">Dignify</button>
-
-            <button id="delete-progress" class="btn btn-danger">Trash my progress</button>
         </details>
+
+        <button id="delete-progress" class="btn btn-danger">Trash my progress</button>
     </section>
 
     <!-- Bootstrap -->
@@ -42,7 +92,7 @@ integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
 
-    <!-- Game -->
+    <!-- Game Script -->
     <script src="js/game-script.js"></script>
 
     <!-- Setup across files -->

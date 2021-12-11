@@ -17,7 +17,12 @@ body {
 
 /* Just...stuff */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-/* [>-[ DISPLAYS ]-<[ */
+/* [>-[ DISPLAYS ]-<] */
+
+#display-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 .stat-display {
   text-align: center;
@@ -26,7 +31,9 @@ body {
   border-radius: 10px;
   width: 16.9rem;
 
-  box-shadow: rgba(0, 0, 0, 0.411) 0px 0px 20px;
+  margin: 0.8rem auto;
+
+  box-shadow: rgba(0, 0, 0, 0.411) 0 0 2rem;
 }
 
 #clix-display {
@@ -51,7 +58,7 @@ body {
   z-index: 999999999;
 
   color: rgb(8, 80, 8);
-  text-shadow: rgba(0, 0, 0, 0.25) 15px 25px 7px;
+  text-shadow: rgba(0, 0, 0, 0.25) 1.6rem 2.4rem 0.8rem;
 }
 
 .combo {
@@ -59,28 +66,16 @@ body {
   font-size: 3.6rem;
 }
 
-/* ]>-[ DISPLAYS ]-<] */
+/* [>-[ DISPLAYS ]-<] */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-/* [>-[ BUTTONS ]-<[ */
-
-.btn {
-  transition: transform 0.2s, color 0.2s, background-color 0.2s;
-}
-
-.btn:hover {
-  transform: scale(1.1);
-}
-
-.btn:active {
-  transform: scale(0.85);
-}
+/* [>-[ BUTTONS ]-<] */
 
 /* Clik */
 #clik {
   background-color: #7e7a07;
   color: #faf8c0;
 
-  box-shadow: rgba(0, 0, 0, 0.103) 15px 25px 20px;
+  box-shadow: rgba(0, 0, 0, 0.103) 1.6rem 2.4rem 2rem;
 }
 
 #clik:hover {
@@ -93,14 +88,32 @@ body {
   color: #fffc9d1f;
 }
 
-/* CLIXET BUTTON ZONE */
+/* [>-[ BUTTONS ]-<] */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* [>-[ CLIXET ]-<] */
+
+/* Clixet Menu */
+details.clixet {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  width: 16.9rem;
+
+  box-shadow: rgba(0, 0, 0, 0.411) 0 0 2rem;
+}
+
+details.clixet summary {
+  text-align: left;
+}
 
 /* Stereotypical Clixet Button */
 .clixet-btn {
   background-color: #3c5311;
   color: #e9fac0;
+  margin: 0.4rem 0;
 
-  box-shadow: rgba(0, 0, 0, 0.103) 15px 25px 20px;
+  box-shadow: rgba(0, 0, 0, 0.103) 1.6rem 2.4rem 2rem;
 }
 
 .clixet-btn:hover {
@@ -115,4 +128,4 @@ body {
   color: #e9fac04d;
 }
 
-/* ]>-[ BUTTONS ]-<] */
+/* [>-[ BUTTONS ]-<] */

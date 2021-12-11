@@ -32,30 +32,30 @@ function getRandomNumber(max) {
 }
 
 // Get stuff from LocalStorage
-if (localStorage.getItem("clix") != null) {
-    clix = parseInt(localStorage.getItem("clix"));
-    dignity = parseInt(localStorage.getItem("dignity"));
+if (localStorage.getItem("tclix") != null) {
+    clix = parseInt(localStorage.getItem("tclix"));
+    dignity = parseInt(localStorage.getItem("tdignity"));
 
-    multiplier = parseInt(localStorage.getItem("multiplier"));
+    multiplier = parseInt(localStorage.getItem("tmultiplier"));
 
-    clixetMultiplierCost = localStorage.getItem("clixetMultiplierCost");
+    clixetMultiplierCost = localStorage.getItem("tclixetMultiplierCost");
 } else {
-    localStorage.setItem("clix", 0);
-    localStorage.setItem("dignity", 0);
+    localStorage.setItem("tclix", 0);
+    localStorage.setItem("tdignity", 0);
 
-    localStorage.setItem("multiplier", 1);
+    localStorage.setItem("tmultiplier", 1);
 
-    localStorage.setItem("clixetMultiplierCost", 2);
+    localStorage.setItem("tclixetMultiplierCost", 2);
 }
 
 function gameRun() {
 
     // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     // LocalStorage saving
-    localStorage.setItem("clix", clix);
-    localStorage.setItem("dignity", dignity);
-    localStorage.setItem("multiplier", multiplier);
-    localStorage.setItem("clixetMultiplierCost", clixetMultiplierCost);
+    localStorage.setItem("tclix", clix);
+    localStorage.setItem("tdignity", dignity);
+    localStorage.setItem("tmultiplier", multiplier);
+    localStorage.setItem("tclixetMultiplierCost", clixetMultiplierCost);
     // LocalStorage saving
     // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 

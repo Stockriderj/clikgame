@@ -39,3 +39,33 @@ h1 {
 .navbar {
   background: linear-gradient(300deg, #0c970c, #226322);
 }
+/* [>-[ GENERAL ]-<] */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* [>-[ HYPERLINKS ]-<] */
+
+a {
+  color: #30a761;
+  text-decoration: none;
+
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #308051;
+}
+
+/* [>-[ HYPERLINKS ]-<] */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* [>-[ BUTTONS ]-<] */
+
+.btn {
+  transition: transform 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:active {
+  transform: scale(0.85);
+}
