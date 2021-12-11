@@ -24,7 +24,7 @@ var comboMultiplier = 0;
 var comboActive = false;
 
 // Sounds
-const clikSounds = [new Audio("../sounds/clik/clik1.mp3"), new Audio("../sounds/clik/clik2.wav")];
+const clikSounds = [new Audio("sounds/clik/clik1.mp3"), new Audio("sounds/clik/clik2.wav")];
 
 
 function getRandomNumber(max) {
@@ -39,7 +39,6 @@ if (localStorage.getItem("clix") != null) {
     multiplier = parseInt(localStorage.getItem("multiplier"));
 
     clixetMultiplierCost = localStorage.getItem("clixetMultiplierCost");
-    console.log(clixetMultiplierCost);
 } else {
     localStorage.setItem("clix", 0);
     localStorage.setItem("dignity", 0);
@@ -74,7 +73,12 @@ clikBtn.addEventListener("click", () => {
     gameRun();
 
     // Sound effects
-    clikSounds[0].play(); // weird formula to get a random element out of the array just deal with it
+    clikSounds[getRandomNumber(clikSounds.length - 1)].play(); // weird formula to get a random element out of the array just deal with it
+
+    // Combo checker and display appropriate message
+    if (comboActive === false) {
+        comboMultiplier = 0;
+    }
 
     // CLIK LAND
     // -=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -83,12 +87,9 @@ clikBtn.addEventListener("click", () => {
     // Create clik multiplier display
     const clikMultiplierDisplay = document.createElement("p");
     clikMultiplierDisplay.classList.add("clik-multiplier-display");
+    clikMultiplierDisplay.style.transition = "opacity 0.5s"; // To avoid the delay from the CSS
 
-    // Combo checker and display appropriate message
-    if (comboActive === false) {
-        comboMultiplier = 0;
-    }
-
+    // Checks if a combo is active, and if it is, apply special styles
     if (comboActive) {
         clikMultiplierDisplay.innerHTML = `+${multiplier + comboMultiplier}`;
         clikMultiplierDisplay.classList.add("combo");
