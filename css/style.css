@@ -20,8 +20,6 @@ body {
   /* So we can use REM */
   font-size: 62.5%;
 
-  padding-left: 0.8rem;
-
   font-size: 1rem;
 }
 
@@ -59,13 +57,17 @@ a:hover {
 /* [>-[ BUTTONS ]-<] */
 
 .btn {
-  transition: transform 0.2s, color 0.2s, background-color 0.2s;
+  border-radius: 10px;
+
+  transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
 }
 
 .btn:hover {
   transform: scale(1.1);
+  opacity: 0.8;
 }
 
 .btn:active {
   transform: scale(0.85);
+  opacity: 0.6;
 }

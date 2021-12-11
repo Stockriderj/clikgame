@@ -10,18 +10,19 @@
   color: #090977;
 }
 
-/* 
-body {
-  background-color: orange;
-} */
+#game {
+  width: 100%;
+}
 
 /* Just...stuff */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* [>-[ DISPLAYS ]-<] */
 
 #display-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-evenly;
+
+  margin-bottom: 0.8rem;
 }
 
 .stat-display {
@@ -29,9 +30,7 @@ body {
   font-size: 1.2rem;
   padding: 0.8rem;
   border-radius: 10px;
-  width: 16.9rem;
-
-  margin: 0.8rem auto;
+  width: 30%;
 
   box-shadow: rgba(0, 0, 0, 0.411) 0 0 2rem;
 }
@@ -44,7 +43,7 @@ body {
 }
 
 #dignity-display {
-  border: 10px ridge #090977;
+  border: 10px ridge #090955;
 
   color: #0b0b2b;
   background-color: #4343eb;
@@ -72,20 +71,15 @@ body {
 
 /* Clik */
 #clik {
+  border-radius: 20px;
   background-color: #7e7a07;
   color: #faf8c0;
+  font-size: 4.4rem;
+  padding: 1.6rem 3.2rem;
+
+  text-align: center;
 
   box-shadow: rgba(0, 0, 0, 0.103) 1.6rem 2.4rem 2rem;
-}
-
-#clik:hover {
-  background-color: #7e7a07d5;
-  color: #fffc9db2;
-}
-
-#clik:active {
-  background-color: #4d4a05ad;
-  color: #fffc9d1f;
 }
 
 /* [>-[ BUTTONS ]-<] */
@@ -117,15 +111,7 @@ details.clixet summary {
 }
 
 .clixet-btn:hover {
-  background-color: #3c5311d7;
-  color: #e9fac086;
-
-  z-index: 9999;
-}
-
-.clixet-btn:active {
-  background-color: #3c5311ab;
-  color: #e9fac04d;
+  color: #e9fac0;
 }
 
 /* [>-[ BUTTONS ]-<] */
